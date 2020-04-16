@@ -1,0 +1,15 @@
+#! /bin/bash
+
+gcc -c main.c
+gcc -c local_server.c
+gcc -c local_client.c
+gcc -c internet_server.c
+gcc -c internet_client.c
+
+gcc -o mestra main.o local_client.o local_server.o internet_server.o internet_client.o
+
+rm main.o
+rm local_client.o 
+rm local_server.o
+rm internet_server.o
+rm internet_client.o
